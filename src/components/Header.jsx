@@ -1,6 +1,6 @@
 import Button from "./Button";
 
-const Header = () => {
+const Header = ({ onRequestNewQuote }) => {
   return (
     <div>
       <div className="flex flex-col gap-1">
@@ -9,7 +9,7 @@ const Header = () => {
           Random Quotes at Your Fingertips
         </p>
       </div>
-      <Button />
+      <Button onRequestNewQuote={onRequestNewQuote} />
     </div>
   );
 };

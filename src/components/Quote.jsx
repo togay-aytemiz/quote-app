@@ -1,7 +1,8 @@
 const Quote = ({ quote }) => {
   const { author, text } = quote;
 
-  // let updatedAuthor = author.split(",").map((part) => part.trim());
+  let updatedAuthor = author.split(",").map((part) => part.trim());
+  // console.log(updatedAuthor[0]);
   // updatedAuthor = updatedAuthor.filter((item) => item !== "type.fit");
   // updatedAuthor = updatedAuthor.join(", ");
 
@@ -9,7 +10,9 @@ const Quote = ({ quote }) => {
     <div>
       <p>{text}</p>
       <hr className="my-5" />
-      <p className="font-semibold">{author}</p>
+      <p className="font-semibold">
+        {updatedAuthor[0] !== "type.fit" && updatedAuthor[0]}
+      </p>
     </div>
   );
 };

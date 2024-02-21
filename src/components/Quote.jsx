@@ -1,10 +1,16 @@
-const Quote = () => {
+const Quote = ({ quote }) => {
+  const { author, text } = quote;
+
+  // let updatedAuthor = author.split(",").map((part) => part.trim());
+  // updatedAuthor = updatedAuthor.filter((item) => item !== "type.fit");
+  // updatedAuthor = updatedAuthor.join(", ");
+
   return (
     <div>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus quidem minima aperiam dicta cupiditate doloribus, atque facilis animi modi ducimus non vero molestias. Commodi dolores porro autem nisi animi asperiores?</p>
-        <hr className="my-5"/>
-        <p className="font-semibold">Author of the Quote</p>
+      <p>{text}</p>
+      <hr className="my-5" />
+      <p className="font-semibold">{author}</p>
     </div>
-  )
-}
-export default Quote
+  );
+};
+export default Quote;
